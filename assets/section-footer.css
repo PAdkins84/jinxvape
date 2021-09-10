@@ -158,6 +158,10 @@
   margin-bottom: 2rem;
   margin-top: 0;
   font-size: 1.6rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (min-width: 990px) {
@@ -177,6 +181,13 @@
 
 .footer-block__newsletter {
   text-align: center;
+  background-color: black;
+}
+
+#NewsletterForm--footer {
+  margin: 0 auto;
+  border-radius: 20px;
+  border: 3px solid deeppink;
 }
 
 .newsletter-form__field-wrapper {
@@ -193,7 +204,8 @@
     margin: 0;
   }
 
-  .footer-block__newsletter:not(:only-child) .newsletter-form__message--success {
+  .footer-block__newsletter:not(:only-child)
+    .newsletter-form__message--success {
     left: auto;
   }
 }
@@ -363,7 +375,6 @@ noscript .localization-selector.link {
   opacity: 1;
   animation: animateLocalization var(--duration-default) ease;
 }
-
 
 @media screen and (min-width: 750px) {
   .footer__payment {

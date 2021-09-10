@@ -769,7 +769,7 @@ summary::-webkit-details-marker {
 .title-wrapper-with-link {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   gap: 1rem;
   margin: 4rem 0 3rem;
   flex-wrap: wrap;
@@ -1224,7 +1224,8 @@ deferred-media {
   padding-left: 0;
 }
 
-.share-button__button:hover, details[open] > .share-button__button {
+.share-button__button:hover,
+details[open] > .share-button__button {
   color: rgb(var(--color-link));
 }
 
@@ -1271,7 +1272,7 @@ details[open] > .share-button__fallback {
 }
 
 .share-button__fallback button:hover {
-  color: rgba(var(--color-foreground),.75);
+  color: rgba(var(--color-foreground), 0.75);
 }
 
 .share-button__fallback button:hover svg {
@@ -1409,7 +1410,7 @@ details[open] > .share-button__fallback {
   position: absolute;
   transition: top var(--duration-short) ease,
     font-size var(--duration-short) ease;
-  color: rgba(var(--color-foreground), 0.75);
+  color: #fff;
   letter-spacing: 0.1rem;
   line-height: 1.5;
 }
@@ -1446,8 +1447,9 @@ details[open] > .share-button__fallback {
 
 .field__button {
   align-items: center;
-  background-color: transparent;
+  background-color: #ff1493;
   border: 0;
+  border-radius: 20px;
   color: currentColor;
   cursor: pointer;
   display: flex;
@@ -1458,7 +1460,7 @@ details[open] > .share-button__fallback {
   position: absolute;
   right: 0;
   top: 0;
-  width: 4.4rem;
+  width: 8rem;
 }
 
 .field__button > svg {
@@ -1765,7 +1767,7 @@ input[type='checkbox'] {
   grid-template-areas: 'left-icon heading icons';
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
-  background-color: rgb(var(--color-background));
+  background-color: black;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -2079,7 +2081,8 @@ details[open] > .header__icon--menu .icon-hamburger {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: white;
+  text-transform: uppercase;
 }
 
 .header__menu-item:hover {
@@ -2187,4 +2190,79 @@ details-disclosure > details {
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
   color: rgb(var(--color-foreground));
   word-break: break-word;
+}
+
+/* CUSTOM STYLES */
+
+.search-icon {
+  width: 40px;
+}
+
+.btn-custom {
+  background-color: #ff1493;
+  border-radius: 20px;
+  width: 12rem;
+  color: #fff;
+  font-size: 20px;
+}
+
+.hero-test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.hero-test-try {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.hero-test-img {
+  max-width: 60rem;
+}
+
+.aprSize {
+  font-size: 10rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.scratch-img {
+  width: 100vw;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.agFont {
+  font-family: 'edosz' !important;
+  font-size: 6.5rem;
+  line-height: 0.9;
+}
+
+.icon-size {
+  width: 110px;
+}
+
+.icon-size-steps {
+  width: 150px;
+}
+
+.icon-test {
+  padding-right: 25rem;
+  padding-left: 25rem;
+}
+
+.separator {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.desktop-line {
+  width: 100rem;
 }

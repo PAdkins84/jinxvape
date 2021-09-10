@@ -33,7 +33,17 @@
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
 
+    {{ '//cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' | stylesheet_tag }}
+
     {% style %}
+    @font-face {
+      font-family: 'edosz';
+      src: url('{{ 'edosz.woff' | asset_url }}') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+      }
+
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
@@ -114,9 +124,71 @@
     {% section 'announcement-bar' %}
     {% section 'header' %}
 
+    <div class="hero-test row">
+      <div class="col-md-6 hero-test">
+        <img class="hero-test-img" src={{ 'header-yellow-product-page.jpg' | asset_url }}>
+      </div>
+      <div class="col-md-6 hero-test-try">
+        <h2 class="agFont">Banana & <span class="aprSize">Apricot</span></h2>
+        <br>
+        <p>Unique is too small a word to describe this imaginative flavour.
+          Our witches and wizards have really cast some magic to create what we think
+          must be the greatest Banana e-liquid in the world.
+        </p>
+      </div>
+    </div>
+
+    <div class="icon-test mt-5 text-center d-flex justify-content-around">
+      <img class="icon-size" src={{ 'Yellow-Type-Icon.png' | asset_url }}>
+      <img class="icon-size" src={{ 'Yellow-Size-Icon.png' | asset_url }}>
+      <img class="icon-size" src={{ 'Yellow-Ratio-Icon.png' | asset_url }}>
+      <img class="icon-size" src={{ 'Yellow-Nicotine-Icon.png' | asset_url }}>
+      <img class="icon-size" src={{ 'Yellow-Flavour-Icon.png' | asset_url }}>
+    </div>
+
+    <div class="separator">
+      <img class="desktop-line" src={{ 'Desktop-line-large.png' | asset_url }}>
+    </div>
+
+    <div class="separator">
+      <img class="desktop-line" src={{ 'Desktop-Yellow-Flavour-Name.png' | asset_url }}>
+    </div>
+
+    <div class="hero-test row">
+      <div class="col-md-6 hero-test">
+        <img class="hero-test-img" src={{ 'find-jinx-yellow-product-page.jpg' | asset_url }}>
+      </div>
+      <div class="col-md-6 hero-test-try">
+        <h1 class="">Flavour like no other!</h1>
+        <br>
+        <p>Unique is too small a word to describe this imaginative flavour.
+          Our witches and wizards have really cast some magic to create what we think
+          must be the greatest Banana e-liquid in the world.
+        </p>
+        <button class="btn-danger">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="separator">
+      <img class="desktop-line" src={{ 'Desktop-smooth-block-yellow.png' | asset_url }}>
+    </div>
+
+    <h2 class="text-center mt-5">How to use Jinx shortfill?</h2>
+    <div class="icon-test mt-5 text-center d-flex justify-content-around">
+      <img class="icon-size-steps" src={{ 'step-1-yellow-product-page.jpg' | asset_url }}>
+      <img class="icon-size-steps" src={{ 'step-2-yellow-product-page.jpg' | asset_url }}>
+      <img class="icon-size-steps" src={{ 'step-3-yellow-product-page.jpg' | asset_url }}>
+    </div>
+    
+
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
+    
+    <div>
+      <img class="scratch-img" src={{ 'Divider_Bottom.png' | asset_url }} />
+      <img class="scratch-img" src={{ 'Desktop-Scratch-product-pages.jpg' | asset_url }} />
+    </div>
 
     {% section 'footer' %}
 
