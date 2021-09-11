@@ -97,6 +97,32 @@
         font-weight: var(--font-body-weight);
       }
 
+      
+
+      li.bullet-style-1 {
+        margin: 0;
+	      padding: 0 0 0px 38px;
+        list-style: none;
+        background-image: url("{{ 'Yellow-bullet-1.png' | asset_url }}") !important;
+        background-repeat: no-repeat;
+	      background-position: left center;
+	      background-size: 20px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      li.bullet-style-2 {
+        margin: 0;
+	      padding: 0 0 0 38px;
+        list-style: none;
+        background-image: url("{{ 'Yellow-bullet-2.png' | asset_url }}") !important;
+        background-repeat: no-repeat;
+	      background-position: left center;
+	      background-size: 20px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
       @media screen and (min-width: 750px) {
         body {
           font-size: 1.6rem;
@@ -121,73 +147,169 @@
       {{ "accessibility.skip_to_text" | t }}
     </a>
 
-    {% section 'announcement-bar' %}
+    <!-- {% section 'announcement-bar' %} -->
+    <div class="custom-bar"> </div>
     {% section 'header' %}
 
     <div class="hero-test row">
-      <div class="col-md-6 hero-test">
+      <div class="col-lg-6 hero-test">
         <img class="hero-test-img" src={{ 'header-yellow-product-page.jpg' | asset_url }}>
       </div>
-      <div class="col-md-6 hero-test-try">
+      <div class="col-lg-6 hero-test-try">
         <h2 class="agFont">Banana & <span class="aprSize">Apricot</span></h2>
         <br>
         <p>Unique is too small a word to describe this imaginative flavour.
           Our witches and wizards have really cast some magic to create what we think
           must be the greatest Banana e-liquid in the world.
         </p>
+        <ul class="custom-bullets">
+          <li class="bullet-style-1">
+            <p class="bullet-text">Free fast delivery on all orders over £20</p>
+          </li>
+          <li class="bullet-style-2">
+            <p class="bullet-text">Same day dispatch weekdays by 6pm</p>
+          </li>
+        </ul>
+
+        <img class="desktop-line-small" src={{ 'Desktop-line-small.png' | asset_url }}> 
+        <img class="mobile-line-small" src={{ 'Mobile-line-small.png' | asset_url }}> 
+
+        <div class="banana-buy-now">
+          <h3 class="price-header">ONLY £14.99</h3>
+          <button class="btn btn-custom-2">Buy Now</button>
+        </div>
       </div>
     </div>
 
-    <div class="icon-test mt-5 text-center d-flex justify-content-around">
-      <img class="icon-size" src={{ 'Yellow-Type-Icon.png' | asset_url }}>
-      <img class="icon-size" src={{ 'Yellow-Size-Icon.png' | asset_url }}>
-      <img class="icon-size" src={{ 'Yellow-Ratio-Icon.png' | asset_url }}>
-      <img class="icon-size" src={{ 'Yellow-Nicotine-Icon.png' | asset_url }}>
-      <img class="icon-size" src={{ 'Yellow-Flavour-Icon.png' | asset_url }}>
+    <div class="icon-test text-center d-flex justify-content-around">
+      <div>
+        <img class="icon-size mb-3" src={{ 'Yellow-Type-Icon.png' | asset_url }}>
+        <h4 class="font-weight-bold">Type</h4>
+        <p>Shortfill</p>
+      </div>
+      <div>
+        <img class="icon-size mb-3" src={{ 'Yellow-Size-Icon.png' | asset_url }}>
+        <h4 class="font-weight-bold">Size</h4>
+        <p>100ml</p>
+      </div>
+      <div>
+        <img class="icon-size mb-3" src={{ 'Yellow-Ratio-Icon.png' | asset_url }}>
+        <h4 class="font-weight-bold">Ratio</h4>
+        <p>170VG/30PG</p>
+      </div>
+      <div>
+        <img class="icon-size mb-3" src={{ 'Yellow-Nicotine-Icon.png' | asset_url }}>
+        <h4 class="font-weight-bold">Nicotine</h4>
+        <p>Omg</p>
+      </div>
+      <div>
+        <img class="icon-size mb-3" src={{ 'Yellow-Flavour-Icon.png' | asset_url }}>
+        <h4 class="font-weight-bold">Flavour</h4>
+        <p>Banana & Apricot</p>
+      </div>
+      
     </div>
 
     <div class="separator">
       <img class="desktop-line" src={{ 'Desktop-line-large.png' | asset_url }}>
+      <img class="mobile-line-small" src={{ 'Mobile-line-large.png' | asset_url }}> 
     </div>
 
     <div class="separator">
       <img class="desktop-line" src={{ 'Desktop-Yellow-Flavour-Name.png' | asset_url }}>
+      <img class="mobile-line" src={{ 'Mobile-Yellow-Flavour-Name.png' | asset_url }}>
+      <h1 class="centered agFont">Bewitching Banana!</h1>
     </div>
 
-    <div class="hero-test row">
-      <div class="col-md-6 hero-test">
-        <img class="hero-test-img" src={{ 'find-jinx-yellow-product-page.jpg' | asset_url }}>
+    <div class="find-jinx-win row">
+      <div class="col-md-4 hero-test">
+        <img class="find-jinx-img" src={{ 'find-jinx-yellow-product-page.jpg' | asset_url }}>
       </div>
-      <div class="col-md-6 hero-test-try">
-        <h1 class="">Flavour like no other!</h1>
+      <div class="col-md-8 hero-test-try">
+        <h2 class="font-weight-bold">Flavour like no other!</h2>
         <br>
-        <p>Unique is too small a word to describe this imaginative flavour.
-          Our witches and wizards have really cast some magic to create what we think
-          must be the greatest Banana e-liquid in the world.
+        <p class="find-jinx-p">On the inhale, your palate is treated to a fresh blast of tropical banana before lush Apricots slide in with a syrupy sweetness.
+          Exotic, sweet and totally refreshing, you won't believe how good this flavour is until you've tried it!
         </p>
-        <button class="btn-danger">Buy Now</button>
+        <button class="btn btn-custom-win">Buy Now</button>
       </div>
     </div>
 
     <div class="separator">
       <img class="desktop-line" src={{ 'Desktop-smooth-block-yellow.png' | asset_url }}>
+      <img class="mobile-line-2" src={{ 'Mobile-smooth-block-yellow.png' | asset_url }}>
+        <div class="centered">
+          <h2 class="font-weight-bold">Happy Jinxers</h2>
+          <p class="mt-2 mb-5 happy-jinxers">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac.</p>
+          <h3 class="font-weight-bold">David Creswell	&nbsp;<span class="happy-jinxers">&nbsp;Influencer</span></h3>
+          <img class="mt-3" src={{ 'scroll-btn.png' | asset_url }}>
+        </div>
     </div>
 
-    <h2 class="text-center mt-5">How to use Jinx shortfill?</h2>
+    <h2 class="text-center jinx-shortfill-style font-weight-bold">How to use Jinx shortfill?</h2>
     <div class="icon-test mt-5 text-center d-flex justify-content-around">
-      <img class="icon-size-steps" src={{ 'step-1-yellow-product-page.jpg' | asset_url }}>
-      <img class="icon-size-steps" src={{ 'step-2-yellow-product-page.jpg' | asset_url }}>
-      <img class="icon-size-steps" src={{ 'step-3-yellow-product-page.jpg' | asset_url }}>
+      <div>
+        <img class="icon-size-steps" src={{ 'step-1-yellow-product-page.jpg' | asset_url }}>
+        <p class="font-weight-bold">Unscrew the lid and take<br/>off the cap.</p>
+      </div>
+      <div>
+        <img class="icon-size-steps" src={{ 'step-2-yellow-product-page.jpg' | asset_url }}>
+        <p class="font-weight-bold">Add preferred amount of<br/>nic shot.</p>
+      </div>
+      <div>
+        <img class="icon-size-steps" src={{ 'step-3-yellow-product-page.jpg' | asset_url }}>
+        <p class="font-weight-bold">Shake well, fill your tank<br/>and enjoy.</p>
+      </div>
+    </div>
+
+    <div class="shortfill-instructions">
+      <p class="shortfill-p">To add nicotine to this shortfill e-liquid, unscrew the lid and take off the cap before squeezing in the preferred amount of nic
+        shot (sold separately). Once the lid has been securely reattached, shake the bottle for even flavour, then fill your tank! For
+        optimum flavour and vapour production, we recommend vaping with a DTL / sub-ohm device from 30-100watts.
+      </p>
+      <h3 class="font-weight-bold mt-5">Add 2 X 10ml 18mg nic shots for 120ml 3g e-liquid.</h3>
+    </div>
+
+    <div class="separator">
+      <img class="desktop-line" src={{ 'Desktop-line-large.png' | asset_url }}>
     </div>
     
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
+
+    <div class="scratch-section">
+        <img class="scratch-img" src={{ 'Divider_Bottom.png' | asset_url }} />
+      <div class="separator">  
+          <img class="scratch-img-2" src={{ 'Desktop-Scratch-product-pages.jpg' | asset_url }} />
+          <img class="mobile-scratch" src={{ 'Mobile-Scratch-product-pages.jpg' | asset_url }} />
+        <div class="scratch-info">
+          <h1 class="agFont scratch-text">Scratch &<br/> <span class="scratch-win-text">Win!</span></h1>
+          <h3 class="scratch-text">With 3 tiers of prizes, Jinx not only has the freshest<br/>flavours but the best bonuses!</h3>
+          <button class="btn mt-3 btn-custom-win">Redeem</button>
+        </div>    
+      </div>
+    </div>
     
-    <div>
-      <img class="scratch-img" src={{ 'Divider_Bottom.png' | asset_url }} />
-      <img class="scratch-img" src={{ 'Desktop-Scratch-product-pages.jpg' | asset_url }} />
+
+    <div class="footer-ad-section row">
+      
+      <div class="ad-custom-bg-1 clearfix col-md-6 mr-4">
+        <p class="ad-header">The hunt<br/> for the<br/> Gold Jinx!<br/>
+          <button class="btn btn-custom-mobile mt-4">Redeem</button>
+        </p>
+        
+        <img class="footer-img float-right" src={{ 'gold-jinx-square-v1-product-page.jpg' | asset_url }} />
+      </div>
+        
+      <div class="ad-custom-bg-2 clearfix col-md-6 ml-4">
+          <p class="ad-header">Try a<br/> Sample<br/> Pack now!<br/>
+            <button class="btn btn-custom-mobile mt-4">Shop Now</button>
+          </p>
+          <img class="footer-img float-right" src={{ 'samples-blackberry-product-pages.jpg' | asset_url }} />
+      </div>
+      
     </div>
 
     {% section 'footer' %}

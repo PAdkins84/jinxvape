@@ -302,7 +302,7 @@
       <nav class="header__inline-menu">
         <ul class="list-menu list-menu--inline" role="list">
           {%- for link in section.settings.menu.links -%}
-            <li>
+            <li class="ml-3 mr-3">
               {%- if link.links != blank -%}
                 <details-disclosure>
                   <details>
@@ -346,8 +346,7 @@
               {%- endif -%}
             </li>
           {%- endfor -%}
-          <img class="search-icon ml-5 mr-4" src={{ 'loupe.png' | asset_url }}>
-          <button class="btn btn-custom">Shop Now</button>
+
         </ul>
       </nav>
     {%- endif -%}
@@ -404,7 +403,8 @@
         </a>
       {%- endif -%}
 
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link link--text focus-inset" id="cart-icon-bubble">
+      <button class="btn btn-custom ml-3">Shop Now</button>
+      <!-- <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link link--text focus-inset" id="cart-icon-bubble">
         {%- liquid
           if cart == empty
             render 'icon-cart-empty'
@@ -421,7 +421,7 @@
             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
           </div>
         {%- endif -%}
-      </a>
+      </a> -->
     </div>
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>

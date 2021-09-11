@@ -9,7 +9,7 @@
 
 <noscript>{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-li st-payment.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-list-social.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
@@ -19,8 +19,8 @@
   {%- if section.settings.newsletter_enable -%}
     <div class="footer-block__heading">
       {%- if section.settings.newsletter_heading != blank -%}
-        <h2 class="footer-block__heading">{{ section.settings.newsletter_heading | escape }}</h2>
-        <p>Join our mailing list! We only send an email about once a month and its always about the good things.</p>
+        <h2 class="footer-block__heading">Newsletter</h2>
+        <p class="newsletter-text">Join our mailing list! We only send an email about once a month and its always about the good things.</p>
       {%- endif -%}
       {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
         <input type="hidden" name="contact[tags]" value="newsletter">
@@ -82,7 +82,7 @@
           {%- for block in section.blocks -%}
             <div class="footer-block grid__item{% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
               {%- if block.settings.heading != blank -%}
-                <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+                <h2 class="footer-block__heading-custom">{{- block.settings.heading | escape -}}</h2>
               {%- endif -%}
 
               {%- case block.type -%}
@@ -103,7 +103,7 @@
                     </ul>
                   {%- endif -%}
                 {%- when 'image' -%}
-                  <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
+                  <div class="footer-block__details-content-1 footer-block-image {{ block.settings.alignment }}">
                     {%- if block.settings.image != blank -%}
                       {%- assign image_size = block.settings.image_width | append: 'x' -%}
                       <img
@@ -113,8 +113,31 @@
                         loading="lazy"
                         width="{{ block.settings.image.width }}"
                         height="{{ block.settings.image.height }}"
-                        style="max-width: min(100%, {{ block.settings.image_width }}px);"
+                        style="max-width: min(100%, 180px);"
                       >
+                    
+                    <div class="jinx-social">
+                      <a href="/" class="custom-link">Follow Jinx!</a>
+                      {%- if settings.social_facebook_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_facebook_link }}" class="link link--text list-social__link" aria-describedby="a11y-external-message">
+                            {%- render 'icon-facebook' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+                          </a>
+                        </li>
+                        {%- if settings.social_instagram_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_instagram_link }}" class="link link--text list-social__link" aria-describedby="a11y-external-message">
+                            {%- render 'icon-instagram' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+                          </a>
+                        </li>
+                      {%- endif -%}
+
+                    </div>
+                      
+
+            {%- endif -%}
                     {%- else -%}
                       {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                     {%- endif -%}
@@ -125,7 +148,7 @@
         </div>
       {%- endif -%}
 
-        {%- if section.settings.show_social -%}
+        <!-- {%- if section.settings.show_social -%}
           <ul class="footer__list-social list-unstyled list-social" role="list">
             {%- if settings.social_twitter_link != blank -%}
               <li class="list-social__item">
@@ -203,7 +226,7 @@
         {%- endif -%}
       </div>
     </div>
-  {%- endif -%}
+  {%- endif -%} -->
 
   <div class="footer__content-bottom">
     <div class="footer__content-bottom-wrapper page-width">
