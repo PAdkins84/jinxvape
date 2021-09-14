@@ -626,3 +626,25 @@ class VariantRadios extends VariantSelects {
 }
 
 customElements.define('variant-radios', VariantRadios);
+
+const menuOne = document.getElementsByClassName('menu1');
+const menuTwo = document.getElementsByClassName('menu2');
+const menuThree = document.getElementsByClassName('menu3');
+
+function footerDropdown(menuItem) {
+  if(menuItem === 1) {
+    toggleMenu(menuOne);
+  } else if(menuItem === 2) {
+    toggleMenu(menuTwo);
+  } else if(menuItem === 3) {
+    toggleMenu(menuThree);
+  }
+}
+
+function toggleMenu(menuItem) {
+  if(menuItem[0].classList.contains("dropdown-menu-footer")) {
+    menuItem[0].classList.remove('dropdown-menu-footer')
+  } else {
+    menuItem[0].classList.add('dropdown-menu-footer')
+  }
+}

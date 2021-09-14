@@ -129,6 +129,12 @@
 
 /* base */
 
+html,
+body {
+  width: 100% !important;
+  overflow-x: hidden !important;
+}
+
 .no-js:not(html) {
   display: none !important;
 }
@@ -2220,6 +2226,7 @@ details-disclosure > details {
   }
   .hero-test {
     display: flex !important;
+    width: 103vw;
   }
   .centered-review {
     position: static !important;
@@ -2244,6 +2251,13 @@ details-disclosure > details {
   .banana-buy-now {
     padding-left: 50px !important;
   }
+  .footer-block__heading-custom {
+    display: flex;
+    padding-left: 15px;
+    border-top: 1px solid white;
+    width: 80vw;
+  }
+
   .agFont {
     font-size: 4.5rem !important;
     margin-top: 10px;
@@ -2263,6 +2277,13 @@ details-disclosure > details {
     padding-left: 5rem !important;
     flex-wrap: wrap !important;
   }
+  .icon-test-instructions {
+    margin: 40px 0;
+    padding-right: 5rem !important;
+    padding-left: 42rem !important;
+    /* flex-wrap: wrap !important; */
+    overflow: scroll;
+  }
   h1.centered {
     top: 65px !important;
     font-size: 6rem !important;
@@ -2280,11 +2301,13 @@ details-disclosure > details {
     position: relative !important;
     display: block !important;
     max-height: 425px;
+    width: 100vw;
   }
   .mobile-scratch {
     position: relative !important;
     display: block !important;
     max-height: 742px;
+    width: 100vw;
   }
   .centered-review {
     padding: 0 !important;
@@ -2309,14 +2332,21 @@ details-disclosure > details {
     font-size: 16px;
   }
   .footer-img {
-    width: 200px !important;
+    width: 190px !important;
+    margin-right: 0px !important;
+  }
+  .footer-ad-section {
+    width: 104vw;
   }
   .ad-header {
     font-size: 2.5rem !important;
-    margin-right: 20px !important;
+    margin-right: 15px !important;
   }
   .find-jinx-img {
     max-width: 360px !important;
+  }
+  .find-jinx-win {
+    width: 103vw;
   }
   .happy-jinxers {
     width: 300px;
@@ -2331,6 +2361,35 @@ details-disclosure > details {
   h2.footer-block__heading {
     font-size: 20px;
   }
+  .ad-custom-bg-1 {
+    margin-right: 0 !important;
+  }
+  .ad-custom-bg-2 {
+    margin-left: 0 !important;
+  }
+  .jinx-social {
+    justify-content: center;
+  }
+  .footer-block__details-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dropdown-menu-footer {
+    display: none;
+    border: 1px solid red;
+    cursor: pointer;
+  }
+  .plusIcon {
+    display: inline !important;
+    width: 30px;
+    float: right;
+    background-color: white;
+  }
+  .border-custom {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /* CUSTOM STYLES */
@@ -2339,6 +2398,10 @@ details-disclosure > details {
   min-height: 40px;
   height: 40px;
   background-color: #ffdb03;
+}
+
+.plusIcon {
+  display: none;
 }
 
 .search-icon {
@@ -2623,5 +2686,9 @@ a.custom-link {
 }
 
 .mobile-line-2 {
+  display: none;
+}
+
+.dropdown-menu-footer {
   display: none;
 }

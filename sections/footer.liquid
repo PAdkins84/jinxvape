@@ -78,11 +78,19 @@
             assign footer_grid_class = 'grid--3-col-tablet'
           endif
         -%}
+
         <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
+          {% assign count = 0 %}
           {%- for block in section.blocks -%}
+            {% assign count = count | plus: 1 %}
             <div class="footer-block grid__item{% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
+              
               {%- if block.settings.heading != blank -%}
+              <div onclick="footerDropdown({{count}})" class="border-custom">
                 <h2 class="footer-block__heading-custom">{{- block.settings.heading | escape -}}</h2>
+                <img class="plusIcon" src={{ 'plus.jpg' | asset_url }} />
+              </div>
+                
               {%- endif -%}
 
               {%- case block.type -%}
@@ -92,7 +100,7 @@
                   </div>
                 {%- when 'link_list' -%}
                   {%- if block.settings.menu != blank and block.settings.heading != blank -%}
-                    <ul class="footer-block__details-content list-unstyled">
+                    <ul class="menu{{count}} footer-block__details-content list-unstyled dropdown-menu-footer">
                       {%- for link in block.settings.menu.links -%}
                         <li>
                           <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
