@@ -2392,6 +2392,36 @@ details-disclosure > details {
   }
 }
 
+@media only screen and (min-width: 595px) and (max-width: 950px) {
+  .agFont {
+    font-size: 3rem !important;
+  }
+  .scratch-info {
+    padding: 0 !important;
+    transform: translate(-30%, -50%) !important;
+  }
+  .scratch-text {
+    font-size: 1.9rem !important;
+  }
+  .scratch-win-text {
+    font-size: 10rem !important;
+  }
+  .btn-custom-mobile-2 {
+    background-color: #ff1493;
+    border-radius: 20px;
+    width: 12rem;
+    height: 4rem;
+    color: #fff;
+    font-size: 18px;
+  }
+  .find-jinx-img {
+    max-width: 310px !important;
+  }
+  .find-jinx-p {
+    max-width: initial !important;
+  }
+}
+
 /* CUSTOM STYLES */
 
 .custom-bar {
